@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232811;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+font-family: 'Monoton', cursive;
+  text-align: center;
+  font-size: 45px;
+  color: rgb(237, 234, 237);
+  margin: 70px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: rgb(237, 234, 237);
+  margin: 0px 0 10px 0;
+}
+p {
+  color: rgb(237, 234, 237);
+  background: black;
+  background: linear-gradient(bottom, #232811, rgba(243, 229, 20, 0.4));
+  background: -webkit-linear-gradient(bottom, #232811, rgba(243, 229, 20, 0.4));
+  background: -moz-linear-gradient(bottom, #232811, rgba(243, 229, 20,, 0.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(0, 221, 220, 0.4)),url("https://i.imgur.com/NVJNgcv.jpg");
+  background-position: 0px -200px;
+}
+.second{
+  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(0, 221, 220, 0.4)), url("https://i.imgur.com/oi4oMGX.jpg");
+  background-position: 0px -1px;
+}
+.dessert{
+  background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(0, 221, 220, 0.4)), url("https://i.imgur.com/5Ir2B7B.jpg");
+  background-position: 0px -400px;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Valley's Greenhouse</h1>
+<h2>Local Plant Shop</h2>
+<div class="first">
+  <p> Monsterra's <span class="price">$20</span><br />
+  <small>This plant is a beautiful house plant. It promotes fresh oxyygen production and only needs to be watered every 2 weeks. Moderate sunlight is recommended. </small></p>
+</div>
+
+<div class="second">
+  <p> Fig Tree's <span class="price">$35</span><br />
+  <small>This plant is a beautiful house plant. It promotes fresh oxyygen production and only needs to be watered every 2.5 weeks. It is best to place this plant near a window.</small></p>
+</div>
+  
+<div class="dessert">
+  <p> Pothos Vine's <span class="price">$18</span><br />
+  <small>This plant is a beautiful house plant. It promotes fresh oxyygen production and only needs to be watered every 2 weeks. These plants are easy to keep alive.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
